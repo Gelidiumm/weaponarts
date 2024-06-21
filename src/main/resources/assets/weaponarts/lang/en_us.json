@@ -1,5 +1,14 @@
 {
   "item.weaponarts.artpoint": "Art Point",
   "item.weaponarts.great_artpoint": "Great Art Point",
+  "item.weaponarts.artrune": "Art Rune",
+  "item.weaponarts.great_artrune": "Great Art Rune",
+
+
+  "block.weaponarts.art_block": "Art Block",
+  "block.weaponarts.great_art_block": "Great Art Block",
+  "block.weaponarts.art_ore": "Art Ore",
+  "block.weaponarts.great_art_ore": "Great Art Ore",
+
   "creativetab.weaponarts_tab": "Weapon Arts"
 }

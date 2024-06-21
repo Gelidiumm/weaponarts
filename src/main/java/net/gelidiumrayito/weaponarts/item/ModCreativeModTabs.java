@@ -1,6 +1,7 @@
 package net.gelidiumrayito.weaponarts.item;
 
 import net.gelidiumrayito.weaponarts.WeaponArts;
+import net.gelidiumrayito.weaponarts.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,7 +19,20 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.weaponarts_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.ARTPOINT.get());
+
                         pOutput.accept(ModItems.GREATARTPOINT.get());
+
+                        pOutput.accept(ModItems.ART_RUNE.get());
+
+                        pOutput.accept(ModItems.GREAT_ART_RUNE.get());
+
+                        pOutput.accept(ModBlocks.ART_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.GREAT_ART_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.ART_ORE.get());
+
+                        pOutput.accept(ModBlocks.GREAT_ART_ORE.get());
                     })
                     .build());
 
