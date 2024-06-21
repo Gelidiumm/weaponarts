@@ -1,6 +1,11 @@
 package net.gelidiumrayito.weaponarts;
 
 import com.mojang.logging.LogUtils;
+import net.gelidiumrayito.weaponarts.block.ModBlocks;
+import net.gelidiumrayito.weaponarts.item.ModCreativeModTabs;
+import net.gelidiumrayito.weaponarts.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +35,12 @@ public class WeaponArts
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -54,7 +65,10 @@ public class WeaponArts
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ModItems.ARTPOINT);
+            event.accept(ModItems.GREATARTPOINT);
+        }
     }
 
     @SubscribeEvent
