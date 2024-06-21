@@ -1,9 +1,10 @@
 package net.gelidiumrayito.weaponarts;
 
 import com.mojang.logging.LogUtils;
-import net.gelidiumrayito.weaponarts.block.ModBlocks;
-import net.gelidiumrayito.weaponarts.item.ModCreativeModTabs;
-import net.gelidiumrayito.weaponarts.item.ModItems;
+
+import net.gelidiumrayito.weaponarts.core.ModBlocks;
+import net.gelidiumrayito.weaponarts.core.ModCreativeTabs;
+import net.gelidiumrayito.weaponarts.core.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -35,7 +36,7 @@ public class WeaponArts
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeModTabs.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
 
         ModBlocks.register(modEventBus);
 
